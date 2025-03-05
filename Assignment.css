@@ -4,24 +4,29 @@ body {
     padding: 0;
     background-color: #121212;
     color: #e0e0e0;
-    align-items: center;
+    display: flex;
+    justify-content: center;
 }
 
 #container {
     display: flex;
+    flex-wrap: wrap; /* يسمح بتغيير ترتيب العناصر */
     background: #1e1e1e;
     border-radius: 8px;
     overflow: hidden;
-    height: 100% ;
+    width: 100%;
+    max-width: 1200px;
 }
 
+/* Sidebar */
 .sidebar {
-    width: 100%;
+    width: 250px; /* حجم جانبي افتراضي */
     background: #252525;
     color: #e0e0e0;
     padding: 30px;
     display: flex;
     flex-direction: column;
+    min-height: 100vh; /* جعلها تأخذ ارتفاع كامل الصفحة */
 }
 
 .sidebar h2 {
@@ -39,8 +44,9 @@ body {
     padding: 0;
 }
 
+/* Content */
 .content {
-    width: 100% ;
+    flex: 1; /* يجعل المحتوى يأخذ المساحة المتبقية */
     padding: 30px;
     background: #252525;
     display: flex;
@@ -66,51 +72,45 @@ a {
 
 a:hover {
     color: green;
-    text-decoration:underline ;
+    text-decoration: underline;
 }
 
+/* شاشات أقل من 992px */
 @media (max-width: 992px) {
-    body {
-        background-color: #fc0000;
-            }
-    .container {
-        flex-direction: column;
-        padding: 15px;
+    #container {
+        flex-direction: column; /* جعل الـ Sidebar فوق المحتوى */
     }
-    .sidebar, .content {
-        width: 100%;
-        padding: 15px;
+
+    .sidebar {
+        width: 100%; /* جعلها تأخذ عرض الشاشة بالكامل */
+        text-align: center;
     }
-  
 }
 
+/* شاشات أقل من 768px */
 @media (max-width: 768px) {
-    body {
-        font-size: 16px;
-        background-color: #1e90ff;
+    .content {
+        padding: 20px;
     }
-    h2 {
-        font-size: 20px;
-    }
-    .sidebar, .content {
-        width: 100%;
-        padding: 15px;
+
+    .sidebar {
+        padding: 20px;
     }
 }
 
+/* شاشات أقل من 576px */
 @media (max-width: 576px) {
-    body {
-        font-size: 14px;
-        background-color: #5c5858;
-    }
-    h2 {
-        font-size: 18px;
-    }
-    .container {
-        padding: 10px;
-    }
-    .sidebar, .content {
-        width: 100%;
+    .content {
         padding: 15px;
     }
+
+    .sidebar {
+        padding: 15px;
+    }
+
+    ul li {
+        margin: 5px;
+        padding: 8px;
+    }
 }
+
