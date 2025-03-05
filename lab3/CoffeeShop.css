@@ -1,0 +1,43 @@
+
+body {
+    background-color: #ffffcc;
+    color: #330000;
+    font-family: Verdana, sans-serif;
+}
+
+
+header, footer {
+    background-color: #ccaa66;
+    padding: 10px;
+    text-align: center;
+}
+
+
+#leftcolmun { 
+    float: left;
+    width: 150px;
+    padding-top: 10px;
+    
+}
+
+#rightcolmun { 
+    margin-left: 150px;
+    background-color: #f1e8b0;
+    padding: 10px;
+}
+
+
+.floatright {
+    padding-left: 40px;
+    float: right;
+}
+
+.navBar {
+    text-decoration: none;
+    margin: 15px;
+    display: block;
+    padding: 5px;
+    color: blueviolet;
+    background-color: #E8D882 ;
+    
+}
