@@ -5,6 +5,7 @@ body {
     background-color: #121212;
     color: #e0e0e0;
     align-items: center;
+    min-height: 100vh;
 }
 
 #container {
@@ -69,13 +70,48 @@ a:hover {
     text-decoration:underline ;
 }
 
-@media screen and (min-width: 576px) {
+@media (max-width: 992px) {
+    body {
+        background-color: #fc0000;
+            }
     .container {
         flex-direction: column;
-        height: auto;
+        padding: 15px;
     }
     .sidebar, .content {
         width: 100%;
-        height: auto;
+        padding: 15px;
+    }
+  
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 16px;
+        background-color: #1e90ff;
+    }
+    h2 {
+        font-size: 20px;
+    }
+    .sidebar, .content {
+        width: 100%;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    body {
+        font-size: 14px;
+        background-color: #5c5858;
+    }
+    h2 {
+        font-size: 18px;
+    }
+    .container {
+        padding: 10px;
+    }
+    .sidebar, .content {
+        width: 100%;
+        padding: 15px;
     }
 }
